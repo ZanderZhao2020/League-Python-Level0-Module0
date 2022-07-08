@@ -1,7 +1,24 @@
 from tkinter import messagebox, simpledialog, Tk
 
 # Create an if-main code block, *hint, type main then ctrl+space to auto-complete
-
+if __name__ == '__main__':
+	Window = Tk()
+	Window.withdraw()
+	Score = 0
+	if simpledialog.askinteger("Question", "What is 2+2?") == 4:
+		Score += 1
+		messagebox.showinfo("Message", "Correct")
+	else:
+		messagebox.showerror("Error", "Wrong")
+	if simpledialog.askinteger("Question", "What is 4/2?") == 2:
+		Score += 1
+		messagebox.showinfo("Message", "Correct")
+	else:
+		messagebox.showerror("Error", "Wrong")
+	simpledialog.askinteger("Question", "What is the square root of \"a\"?")
+	messagebox.showerror("Error", "Wrong")
+	messagebox.showinfo("Message", "You got " + str(Score) + " points")
+	Window.mainloop()
 # Make a new window variable, window = Tk()
 
 # Hide the window using the window's .withdraw() method

@@ -1,7 +1,17 @@
 from tkinter import messagebox, simpledialog, Tk
 
 # Create an if-main code block, *hint, type main then ctrl+space to auto-complete
-
+if __name__ == '__main__':
+	Window = Tk()
+	Window.withdraw()
+	Answer = simpledialog.askstring("Question", "Do you know how to write code? (Y/N)")
+	if Answer == "Y":
+		messagebox.showinfo("Message", "You will rule the world")
+	elif Answer == "N":
+		messagebox.showerror("Error", "Sign up for classes at The League")
+	else:
+		messagebox.showerror("Error", "Idiot")
+	Window.mainloop()
 # Make a new window variable, window = Tk()
 
 # Hide the window using the window's .withdraw() method

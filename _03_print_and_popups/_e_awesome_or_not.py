@@ -2,7 +2,20 @@ from tkinter import messagebox, simpledialog, Tk
 import random
 
 # Create an if-main code block, *hint, type main then ctrl+space to auto-complete
-
+if __name__ == '__main__':
+	Window = Tk()
+	Window.withdraw()
+	Number = random.randint(0, 3)
+	print(Number)
+	simpledialog.askstring("Question", "Enter something you think is awesome")
+	if Number == 0:
+		messagebox.showinfo("Message", "That is awesome")
+	elif Number == 1:
+		messagebox.showinfo("Message", "That is okay")
+	elif Number == 2:
+		messagebox.showinfo("Message", "That is boring")
+	else:
+		messagebox.showinfo("Message", "Shut up")
 # Make a new window variable, window = Tk()
 
 # Hide the window using the window's .withdraw() method
